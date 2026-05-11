@@ -1,0 +1,51 @@
+@layer root {
+   :root {
+      --rpc_dark: #131314;
+      --rpc_mid_dark: #1b1b1b;
+      --rpc_light_dark: hsl(210, 64%, 40%);
+      --rpc_dim_accent: #33326a;
+      --rpc_light_accent: #beb2fc;
+      --rpc_light: #e3e3e3;
+   }
+}
+
+body {
+   background-color: var(--rpc_dark);
+}
+
+#main-title {
+   margin: 2% 0 3%;
+   padding: 1%;
+   text-align: center;
+   font-family: "Jersey 25", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   font-size: 70px;
+   color: var(--rpc_light);
+}
+
+#wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%vh;
+}
+
+#flex-container {
+   display: flex;
+   flex-wrap: wrap;
+   width: 500px;
+   height: 500px;
+}
+
+.pixel {
+   box-sizing: border-box;
+   border: solid 0.5px var(--rpc_dim_accent);
+   width: 6.25%;
+   height: 6.25%;
+   flex-shrink: 0;
+}
+
+.is-active {
+   background-color: var(--rpc_light_accent);
+}
