@@ -17,6 +17,58 @@
          <h1 id="main-title">Etch a Sketch</h1>
       </header>
       <main>
+         <button id="settings-btn" type="button" name="button">
+            Sketch Resolution
+         </button>
+
+         <dialog id="pop-up">
+            <form method="dialog">
+               <h2>Select the Sketch Resolution</h2>
+               <div class="card-selector">
+                  <label class="res-card">
+                     <input
+                        id="resolution-input"
+                        type="radio"
+                        name="resolution"
+                        value="low"
+                        checked
+                     />
+                     <div class="card-content">
+                        <span class="title">Low</span>
+                        <span class="desc">16 x 16</span>
+                     </div>
+                  </label>
+                  <label class="res-card">
+                     <input
+                        id="resolution-input"
+                        type="radio"
+                        name="resolution"
+                        value="medium"
+                     />
+                     <div class="card-content">
+                        <span class="title">Medium</span>
+                        <span class="desc">32 x 32</span>
+                     </div>
+                  </label>
+                  <label class="res-card">
+                     <input
+                        id="resolution-input"
+                        type="radio"
+                        name="resolution"
+                        value="high"
+                     />
+                     <div class="card-content">
+                        <span class="title">High</span>
+                        <span class="desc">64 x 64</span>
+                     </div>
+                  </label>
+               </div>
+               <div class="actions">
+                  <button id="confirm-btn">Confirm</button>
+                  <button id="cancel-btn">Cancel</button>
+               </div>
+            </form>
+         </dialog>
          <section id="wrapper">
             <div id="flex-container"></div>
          </section>

@@ -36,6 +36,7 @@ body {
    flex-wrap: wrap;
    width: 500px;
    height: 500px;
+   cursor: url("/etch_a_sketch/assets/brush.png") 0 32, auto;
 }
 
 .pixel {
@@ -48,4 +49,93 @@ body {
 
 .is-active {
    background-color: var(--rpc_light_accent);
+}
+
+/*
+______________
+++++++++++++++
+Dialog Style
+++++++++++++++
+--------------
+*/
+
+#settings-btn {
+   display: block;
+   margin: 0 auto 2%;
+   padding: 0.5% 1%;
+   font-family: "Micro 5";
+   font-size: 30px;
+   border-radius: 10px;
+   background-color: var(--rpc_light);
+}
+
+dialog {
+   background-color: var(--rpc_light);
+   font-family: "Micro 5";
+   text-align: center;
+   padding: 1%;
+   border-radius: 5px;
+}
+
+dialog h2 {
+   font-size: 50px;
+}
+
+dialog input {
+   margin: 0 auto;
+   padding: 1% 0;
+   background-color: var(--rpc_dim_accent);
+   border-radius: 5px;
+}
+
+dialog button {
+   margin-top: 2%;
+   background-color: var(--rpc_light);
+   font-family: "Jersey 25", sans-serif;
+   text-align: center;
+   border-radius: 5px;
+   font-size: 20px;
+}
+
+.card-selector {
+   display: grid;
+   grid-template-columns: 1fr, 1f, 1fr;
+   gap: 10px;
+   margin: 20px 0;
+}
+
+.res-card input[type="radio"] {
+   display: none;
+}
+
+.card-content {
+   display: flex;
+   flex-direction: column;
+   align-self: center;
+   padding: 15px;
+   border: 2px solid var(--rpc_light);
+   border-radius: 5px;
+   cursor: pointer;
+   transition: all 0.2s ease;
+}
+
+.title {
+   display: block;
+   font-weight: bold;
+   font-size: 30px;
+}
+
+.desc {
+   font-size: 0.8rem;
+   color: #666;
+}
+
+.res-card input[type="radio"]:checked + .card-content {
+   border-color: var(--rpc_dim_accent);
+   background-color: #f0f7ff;
+   color: var(--rpc_dim_accent);
+}
+
+.card-content:hover {
+   border-color: var(--rpc_light_accent);
 }
