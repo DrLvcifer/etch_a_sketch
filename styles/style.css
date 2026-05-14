@@ -14,7 +14,7 @@ body {
 }
 
 #main-title {
-   margin: 2% 0 3%;
+   margin: 2% 0 1%;
    padding: 1%;
    text-align: center;
    font-family: "Jersey 25", sans-serif;
@@ -138,4 +138,53 @@ dialog button {
 
 .card-content:hover {
    border-color: var(--rpc_light_accent);
+}
+
+/*______________
+++++++++++++++
+Dialog Style
+++++++++++++++
+--------------
+*/
+
+#tool-bar {
+   background-color: var(--rpc_light);
+   width: 500px;
+   margin: 2% auto;
+   border-radius: 5px;
+   cursor: url("/assets/pointer.png") 0 0, auto;
+   padding-bottom: 0.5%;
+}
+
+#tool-box-title {
+   font-family: "Jersey 25", sans-serif;
+   text-align: center;
+   padding-top: 10px;
+   color: var(--rpc_dim_accent);
+}
+
+#tool-box {
+   margin: 0% auto;
+   width: 70%;
+   display: flex;
+   justify-content: center;
+   gap: 20%;
+}
+
+.tool {
+}
+
+.tool-pic {
+   display: block;
+   margin: 0 auto 3%;
+   transition: all 0.5s ease-out;
+}
+
+.tool-pic:hover {
+   transform: scale(1.2);
+}
+
+.tool-desc {
+   font-family: "Jersey 25", sans-serif;
+   color: #33326a;
 }
