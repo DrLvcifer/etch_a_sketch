@@ -36,14 +36,14 @@ body {
    flex-wrap: wrap;
    width: 500px;
    height: 500px;
-   cursor: url("/etch_a_sketch/assets/brush.png") 0 32, auto;
+   cursor: url("/assets/brush.png") 0 0, auto;
 }
 
 .pixel {
    box-sizing: border-box;
-   border: solid 0.5px var(--rpc_dim_accent);
-   width: 6.25%;
-   height: 6.25%;
+   border: solid 1px var(--rpc_dim_accent);
+   /*width: 6.25%;
+   height: 6.25%;*/
    flex-shrink: 0;
 }
 
