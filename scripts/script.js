@@ -26,18 +26,8 @@ cancelBtn.addEventListener("click", () => {
    dialog.close("cancel");
 });
 
-reset.addEventListener("click", (e) => {
-   container.innerHTML = "";
-   const selectedResolution = document.querySelector(
-      'input[name="resolution"]:checked'
-   );
-
-   if (selectedResolution) {
-      container.innerHTML = "";
-      let sketchResolution = parseInt(selectedResolution.value);
-      createSketchGrid(sketchResolution);
-   }
-});
+confirmBtn.addEventListener("click", applyResolution);
+reset.addEventListener("click", applyResolution);
 
 /*________________________
 *  SCREEN BRAIN & LOGIC
@@ -63,7 +53,7 @@ function createSketchGrid(sketchResolution) {
 
 createSketchGrid(256);
 
-confirmBtn.addEventListener("click", () => {
+function applyResolution() {
    const selectedResolution = document.querySelector(
       'input[name="resolution"]:checked'
    );
@@ -73,7 +63,7 @@ confirmBtn.addEventListener("click", () => {
       let sketchResolution = parseInt(selectedResolution.value);
       createSketchGrid(sketchResolution);
    }
-});
+}
 
 /*________________________
 **************************
