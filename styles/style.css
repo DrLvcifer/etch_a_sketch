@@ -47,8 +47,20 @@ body {
    flex-shrink: 0;
 }
 
-.is-active {
+/*
+______________
+++++++++++++++
+Dialog Style
+++++++++++++++
+--------------
+*/
+
+.draw-mode {
    background-color: var(--rpc_light_accent);
+}
+
+.erase-mode {
+   background-color: var(--rpc_dark);
 }
 
 /*
@@ -169,9 +181,6 @@ Dialog Style
    display: flex;
    justify-content: center;
    gap: 20%;
-}
-
-.tool {
 }
 
 .tool-pic {

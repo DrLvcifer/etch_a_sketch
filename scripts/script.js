@@ -8,12 +8,35 @@ const cancelBtn = document.getElementById("cancel-btn");
 const confirmBtn = document.getElementById("confirm-btn");
 const container = document.getElementById("flex-container");
 
+const color = document.getElementById("color");
+const rainbow = document.getElementById("rainbow");
+const reset = document.getElementById("reset");
+
+let drawMode = true;
+let colorMode = false;
+let rainbowMode = false;
+
+let screenResolution;
+
 setBtn.addEventListener("click", () => {
    dialog.showModal();
 });
 
 cancelBtn.addEventListener("click", () => {
    dialog.close("cancel");
+});
+
+reset.addEventListener("click", (e) => {
+   container.innerHTML = "";
+   const selectedResolution = document.querySelector(
+      'input[name="resolution"]:checked'
+   );
+
+   if (selectedResolution) {
+      container.innerHTML = "";
+      let sketchResolution = parseInt(selectedResolution.value);
+      createSketchGrid(sketchResolution);
+   }
 });
 
 /*________________________
@@ -33,7 +56,7 @@ function createSketchGrid(sketchResolution) {
 
    container.addEventListener("mouseover", (e) => {
       if (e.target.classList.contains("pixel")) {
-         e.target.classList.add("is-active");
+         e.target.classList.add("draw-mode");
       }
    });
 }
@@ -47,7 +70,16 @@ confirmBtn.addEventListener("click", () => {
 
    if (selectedResolution) {
       container.innerHTML = "";
-      const sketchResolution = parseInt(selectedResolution.value);
+      let sketchResolution = parseInt(selectedResolution.value);
       createSketchGrid(sketchResolution);
    }
 });
+
+/*________________________
+**************************
+   THE  TOOLBOX  LOGIC
+**************************
+------------------------*/
+/*________________________
+   THE  ERASER  LOGIC
+------------------------*/
